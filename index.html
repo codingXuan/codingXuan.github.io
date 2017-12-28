@@ -49,7 +49,7 @@
 		  <h1 class="header-author"><a href="">codingXuan</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">沉迷lol无法自拔！</p>
+		<p class="header-subtitle">用心写出好看的代码！</p>
 		
 
 		<nav class="header-menu">
@@ -103,7 +103,7 @@
 			  <h1 class="header-author js-header-author">codingXuan</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>沉迷lol无法自拔！<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>用心写出好看的代码！<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -173,8 +173,14 @@
 <li>1、 何为工厂模式</li>
 </ul>
 <blockquote>
-<p>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;工厂一词，顾名思义是将操作规范化、流程化与自动化。在实际编码中，对实现了同一个接口的大量的类进行实例化，则可以用工厂模式来实现。<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;举个例子:己方做为一个数据分析平台，对接了多个第三方数据提供机构。不同的第三方机构自有一套API文档。为了方便兼容与扩展，则需要一套参数转换的机制。将己方前台参数传入后台，进行参数转换，在发送给对应的第三方机构，获取到数据后，在进行一道转换，将其返回的参数转换为己方的一套参数。<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;实现思路:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;先创建一个提供工厂的接口。提供一个抽象方法.</p>
+<p>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;工厂一词，顾名思义是将操作规范化、流程化与自动化。在实际编码中，对实现了同一个接口的大量的类进行实例化，则可以用工厂模式来实现。<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;举个例子:己方做为一个数据分析平台，对接了多个第三方数据提供机构。不同的第三方机构自有一套API文档。为了方便兼容与扩展，则需要一套参数转换的机制。将己方前台参数传入后台，进行参数转换，在发送给对应的第三方机构，获取到数据后，在进行一道转换，将其返回的参数转换为己方的一套参数。</p>
 </blockquote>
+<ul>
+<li>2、实现思路:  <blockquote>
+<p> 创建一个提供工厂的接口。提供一个抽象参数转换的方法.</p>
+</blockquote>
+</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * Created by Administrator on 2017/12/2 0002.</span><br><span class="line"> * 提供工厂的接口</span><br><span class="line"> */</span><br><span class="line">@Component</span><br><span class="line">public interface ParamsChangeFactory &#123;</span><br><span class="line">    public ParamsChange paramChange();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p> 在创建一个专门做业务处理的接口。提供一个抽象方法  </p>
@@ -187,10 +193,17 @@
 <blockquote>
 <p>实现上述业务处理的接口，创建一个业务处理的类,处理test的参数转换的业务.  </p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * Created by Administrator on 2017/12/2 0002.</span><br><span class="line"> * 参数转换处理类</span><br><span class="line"> */</span><br><span class="line">@Component</span><br><span class="line">public class ParamsChangeHandlerTest implements ParamsChange&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public Map&lt;String, Object&gt; paramChange(Map&lt;String,Object&gt; paraMap) &#123;</span><br><span class="line">        return paraMap;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>实现完成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * Created by Administrator on 2017/12/2 0002.</span><br><span class="line"> * 参数转换处理类</span><br><span class="line"> */</span><br><span class="line">@Component</span><br><span class="line">public class ParamsChangeHandlerTest implements ParamsChange&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public Map&lt;String, Object&gt; paramChange(Map&lt;String,Object&gt; paraMap) &#123;</span><br><span class="line">        paraMap.put(&quot;test&quot;,&quot;见到这句话说明操作成功&quot;);</span><br><span class="line">        return paraMap;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>3、 测试代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String,Object&gt; params=new HashMap&lt;&gt;();</span><br><span class="line">params.put(&quot;srcMap&quot;,&quot;源参数&quot;);</span><br><span class="line">params.put(&quot;destMap&quot;,&quot;目标参数&quot;);</span><br><span class="line">ParamsChangeFactory pcf=new RequestParamChange();</span><br><span class="line">ParamsChange pc=pcf.paramChange();</span><br><span class="line">Map&lt;String,Object&gt; srcMap=pch.paramChange(params);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>4、 总结<blockquote>
+<p> 创建一个提供工厂类的接口，当有新需求更新时(新的第三方接入平台)，只需要实现上述ParamsChangeFactory接口，拿到工厂类，在实现上述业务处理ParamsChange接口，实现具体的业务处理逻辑。即可完成一个新第三方的接入功能。 当然针对参数转换 还需要考虑 定制化需求，例如格式校验，默认值，补齐(己方没有的参数而第三方平台为必传参数)等等。这些实现，博主会慢慢完善，当然有好的设计方案或者已有的demo的小伙伴可以发邮件，相互交流一下哦。 </p>
 </blockquote>
+</li>
+</ul>
 
       
 
