@@ -57,7 +57,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li><a href="/tags/设计模式/">设计模式</a></li>
 	        
 			</ul>
 		</nav>
@@ -131,7 +131,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 50%"><a href="/tags/设计模式/">设计模式</a></li>
 		        
 				</ul>
 			</nav>
@@ -147,6 +147,94 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-责任链模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/05/责任链模式/">责任链的组装</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/05/责任链模式/" class="archive-article-date">
+  	<time datetime="2018-01-05T06:57:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="初识23种设计模式之责任链模式"><a href="#初识23种设计模式之责任链模式" class="headerlink" title="初识23种设计模式之责任链模式"></a>初识23种设计模式之责任链模式</h3><ul>
+<li>责任链模式的概念</li>
+<li><p>1、 什么是责任链  </p>
+<blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;当一个对象的引用被多个对象持有或者说需要在多个处理类中进行业务处理，这样的业务场景就需要用到责任链了。当一个请求进来时，该对象的引用在这个业务处理的链上进行传递，直到某一个处理类决定处理这个请求。处理该请求的类并不会告知发出者，隐瞒了客户端的同时，对该对象进行动态调整。  </p>
+</blockquote>
+</li>
+<li><p>2、实现思路  </p>
+<blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;被共同持有的对象就好比生产线上组装的车辆。不同的流水线均会对车辆进行组装区别在于组装的部位不同。那么我们只需要实现将对象传递下去，并提供各自的业务处理类即可。  </p>
+</blockquote>
+</li>
+</ul>
+        
+          <a class="article-more-a" href="/2018/01/05/责任链模式/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/05/责任链模式/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-抽象静态工厂模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -173,38 +261,11 @@
 <li>1、 何为工厂模式</li>
 </ul>
 <blockquote>
-<p>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;工厂一词，顾名思义是将操作规范化、流程化与自动化。在实际编码中，对实现了同一个接口的大量的类进行实例化，则可以用工厂模式来实现。<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;举个例子:己方做为一个数据分析平台，对接了多个第三方数据提供机构。不同的第三方机构自有一套API文档。为了方便兼容与扩展，则需要一套参数转换的机制。将己方前台参数传入后台，进行参数转换，在发送给对应的第三方机构，获取到数据后，在进行一道转换，将其返回的参数转换为己方的一套参数。</p>
+<p>   &nbsp;&nbsp;&nbsp;&nbsp;工厂一词，顾名思义是将操作规范化、流程化与自动化。在实际编码中，对实现了同一个接口的大量的类进行实例化，则可以用工厂模式来实现。<br> &nbsp;&nbsp;&nbsp;&nbsp;举个例子:己方做为一个数据分析平台，对接了多个第三方数据提供机构。不同的第三方机构自有一套API文档。为了方便兼容与扩展，则需要一套参数转换的机制。将己方前台参数传入后台，进行参数转换，在发送给对应的第三方机构，获取到数据后，在进行一道转换，将其返回的参数转换为己方的一套参数。</p>
 </blockquote>
-<ul>
-<li>2、实现思路:  <blockquote>
-<p> 创建一个提供工厂的接口。提供一个抽象参数转换的方法.</p>
-</blockquote>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * Created by Administrator on 2017/12/2 0002.</span><br><span class="line"> * 提供工厂的接口</span><br><span class="line"> */</span><br><span class="line">@Component</span><br><span class="line">public interface ParamsChangeFactory &#123;</span><br><span class="line">    public ParamsChange paramChange();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p> 在创建一个专门做业务处理的接口。提供一个抽象方法  </p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * Created by Administrator on 2017/12/2 0002.</span><br><span class="line"> * 提供业务处理的接口</span><br><span class="line"> */</span><br><span class="line">@Component</span><br><span class="line">public interface ParamsChange &#123;</span><br><span class="line">    public Map&lt;String,Object&gt; paramChange(Map&lt;String,Object&gt; paraMap);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>实现上述提供工厂的接口，创建一个工厂类.处理company1(test)的参数转换  </p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * Created by Administrator on 2017/12/2 0002.</span><br><span class="line"> * 参数转换的实现类</span><br><span class="line"> */</span><br><span class="line">@Component</span><br><span class="line">public class RequestParamChangeTest implements ParamsChangeFactory&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public ParamsChangeHandlerTest paramChange() &#123;</span><br><span class="line">        return new ParamsChangeHandlerTest();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>实现上述业务处理的接口，创建一个业务处理的类,处理test的参数转换的业务.  </p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * Created by Administrator on 2017/12/2 0002.</span><br><span class="line"> * 参数转换处理类</span><br><span class="line"> */</span><br><span class="line">@Component</span><br><span class="line">public class ParamsChangeHandlerTest implements ParamsChange&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public Map&lt;String, Object&gt; paramChange(Map&lt;String,Object&gt; paraMap) &#123;</span><br><span class="line">        paraMap.put(&quot;test&quot;,&quot;见到这句话说明操作成功&quot;);</span><br><span class="line">        return paraMap;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>3、 测试代码</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String,Object&gt; params=new HashMap&lt;&gt;();</span><br><span class="line">params.put(&quot;srcMap&quot;,&quot;源参数&quot;);</span><br><span class="line">params.put(&quot;destMap&quot;,&quot;目标参数&quot;);</span><br><span class="line">ParamsChangeFactory pcf=new RequestParamChange();</span><br><span class="line">ParamsChange pc=pcf.paramChange();</span><br><span class="line">Map&lt;String,Object&gt; srcMap=pch.paramChange(params);</span><br></pre></td></tr></table></figure>
-<ul>
-<li>4、 总结<blockquote>
-<p> 创建一个提供工厂类的接口，当有新需求更新时(新的第三方接入平台)，只需要实现上述ParamsChangeFactory接口，拿到工厂类，在实现上述业务处理ParamsChange接口，实现具体的业务处理逻辑。即可完成一个新第三方的接入功能。 当然针对参数转换 还需要考虑 定制化需求，例如格式校验，默认值，补齐(己方没有的参数而第三方平台为必传参数)等等。这些实现，博主会慢慢完善，当然有好的设计方案或者已有的demo的小伙伴可以发邮件，相互交流一下哦。 </p>
-</blockquote>
-</li>
-</ul>
-
+        
+          <a class="article-more-a" href="/2017/12/22/抽象静态工厂模式/#more">more >></a>
+        
       
 
       
@@ -217,7 +278,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
         		</li>
       		
 		</ul>
@@ -267,7 +328,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 codingXuan
+    		&copy; 2018 codingXuan
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -342,7 +403,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
               </li>
             
             <div class="clearfix"></div>

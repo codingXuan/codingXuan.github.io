@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>工厂模式的运用 | 技术交流</title>
+  <title>Archives: 2018 | 技术交流</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="初识23种设计模式之抽象工厂 工厂模式的概念 1、 何为工厂模式      &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;工厂一词，顾名思义是将操作规范化、流程化与自动化。在实际编码中，对实现了同一个接口的大量的类进行实例化，则可以用工厂模式来实现。 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;举个例子:己方做为一个数据分析平台，对接了多个第三方数据提供机构。不同的第三方机构自有一套API文">
-<meta name="keywords" content="设计模式">
-<meta property="og:type" content="article">
-<meta property="og:title" content="工厂模式的运用">
-<meta property="og:url" content="http://yoursite.com/2017/12/22/抽象静态工厂模式/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="技术交流">
+<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
 <meta property="og:site_name" content="技术交流">
-<meta property="og:description" content="初识23种设计模式之抽象工厂 工厂模式的概念 1、 何为工厂模式      &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;工厂一词，顾名思义是将操作规范化、流程化与自动化。在实际编码中，对实现了同一个接口的大量的类进行实例化，则可以用工厂模式来实现。 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;举个例子:己方做为一个数据分析平台，对接了多个第三方数据提供机构。不同的第三方机构自有一套API文">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-19T06:28:59.163Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="工厂模式的运用">
-<meta name="twitter:description" content="初识23种设计模式之抽象工厂 工厂模式的概念 1、 何为工厂模式      &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;工厂一词，顾名思义是将操作规范化、流程化与自动化。在实际编码中，对实现了同一个接口的大量的类进行实例化，则可以用工厂模式来实现。 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;举个例子:己方做为一个数据分析平台，对接了多个第三方数据提供机构。不同的第三方机构自有一套API文">
+<meta name="twitter:title" content="技术交流">
   
     <link rel="alternative" href="/atom.xml" title="技术交流" type="application/atom+xml">
   
@@ -151,102 +146,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-抽象静态工厂模式" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      工厂模式的运用
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/01/05/责任链模式/" class="archive-article-date">
+  	<time datetime="2018-01-05T06:57:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-05</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/01/05/责任链模式/">责任链的组装</a>
     </h1>
   
 
-        
-        <a href="/2017/12/22/抽象静态工厂模式/" class="archive-article-date">
-  	<time datetime="2017-12-22T07:58:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="初识23种设计模式之抽象工厂"><a href="#初识23种设计模式之抽象工厂" class="headerlink" title="初识23种设计模式之抽象工厂"></a>初识23种设计模式之抽象工厂</h3><ul>
-<li>工厂模式的概念</li>
-<li>1、 何为工厂模式</li>
-</ul>
-<blockquote>
-<p>   &nbsp;&nbsp;&nbsp;&nbsp;工厂一词，顾名思义是将操作规范化、流程化与自动化。在实际编码中，对实现了同一个接口的大量的类进行实例化，则可以用工厂模式来实现。<br> &nbsp;&nbsp;&nbsp;&nbsp;举个例子:己方做为一个数据分析平台，对接了多个第三方数据提供机构。不同的第三方机构自有一套API文档。为了方便兼容与扩展，则需要一套参数转换的机制。将己方前台参数传入后台，进行参数转换，在发送给对应的第三方机构，获取到数据后，在进行一道转换，将其返回的参数转换为己方的一套参数。</p>
-</blockquote>
-<a id="more"></a>
-<ul>
-<li>2、实现思路:  </li>
-</ul>
-<blockquote>
-<p> 创建一个提供工厂的接口。提供一个抽象参数转换的方法.</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * Created by Administrator on 2017/12/2 0002.</span><br><span class="line"> * 提供工厂的接口</span><br><span class="line"> */</span><br><span class="line">@Component</span><br><span class="line">public interface ParamsChangeFactory &#123;</span><br><span class="line">    public ParamsChange paramChange();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p> 在创建一个专门做业务处理的接口。提供一个抽象方法  </p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * Created by Administrator on 2017/12/2 0002.</span><br><span class="line"> * 提供业务处理的接口</span><br><span class="line"> */</span><br><span class="line">@Component</span><br><span class="line">public interface ParamsChange &#123;</span><br><span class="line">    public Map&lt;String,Object&gt; paramChange(Map&lt;String,Object&gt; paraMap);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>实现上述提供工厂的接口，创建一个工厂类.处理company1(test)的参数转换  </p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * Created by Administrator on 2017/12/2 0002.</span><br><span class="line"> * 参数转换的实现类</span><br><span class="line"> */</span><br><span class="line">@Component</span><br><span class="line">public class RequestParamChangeTest implements ParamsChangeFactory&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public ParamsChangeHandlerTest paramChange() &#123;</span><br><span class="line">        return new ParamsChangeHandlerTest();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>实现上述业务处理的接口，创建一个业务处理的类,处理test的参数转换的业务.  </p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * Created by Administrator on 2017/12/2 0002.</span><br><span class="line"> * 参数转换处理类</span><br><span class="line"> */</span><br><span class="line">@Component</span><br><span class="line">public class ParamsChangeHandlerTest implements ParamsChange&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public Map&lt;String, Object&gt; paramChange(Map&lt;String,Object&gt; paraMap) &#123;</span><br><span class="line">        paraMap.put(&quot;test&quot;,&quot;见到这句话说明操作成功&quot;);</span><br><span class="line">        return paraMap;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>3、 测试代码</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String,Object&gt; params=new HashMap&lt;&gt;();</span><br><span class="line">params.put(&quot;srcMap&quot;,&quot;源参数&quot;);</span><br><span class="line">params.put(&quot;destMap&quot;,&quot;目标参数&quot;);</span><br><span class="line">ParamsChangeFactory pcf=new RequestParamChange();</span><br><span class="line">ParamsChange pc=pcf.paramChange();</span><br><span class="line">Map&lt;String,Object&gt; srcMap=pch.paramChange(params);</span><br></pre></td></tr></table></figure>
-<ul>
-<li>4、 总结<blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;创建一个提供工厂类的接口，当有新需求更新时(新的第三方接入平台)，只需要实现上述ParamsChangeFactory接口，拿到工厂类，在实现上述业务处理ParamsChange接口，实现具体的业务处理逻辑。即可完成一个新第三方的接入功能。 当然针对参数转换 还需要考虑 定制化需求，例如格式校验，默认值，补齐(己方没有的参数而第三方平台为必传参数)等等。这些实现，博主会慢慢完善，当然有好的设计方案或者已有的demo的小伙伴可以发邮件，相互交流一下哦。 </p>
-</blockquote>
-</li>
-</ul>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>来打赏点吧~<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/zhifubao.JPG">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/weixin.JPG">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -258,72 +187,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/01/05/责任链模式/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          责任链的组装
-        
-      </div>
-    </a>
   
   
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#初识23种设计模式之抽象工厂"><span class="toc-number">1.</span> <span class="toc-text">初识23种设计模式之抽象工厂</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -346,8 +222,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
