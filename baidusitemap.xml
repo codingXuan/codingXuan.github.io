@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/01/25/mongodb%E4%B8%8A%E4%BC%A0%E4%B8%8B%E8%BD%BD/</loc>
+    <lastmod>2018-01-25T07:55:49.821Z</lastmod>
+    <data>
+        <display>
+        <title>mongodb实现上传下载</title>
+        <pubTime>2018-01-25T06:16:34.000Z</pubTime>
+        
+        <tag>随笔</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/01/05/%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F/</loc>
+    <lastmod>2018-01-19T08:41:25.473Z</lastmod>
+    <data>
+        <display>
+        <title>责任链的组装</title>
+        <pubTime>2018-01-05T06:57:52.000Z</pubTime>
+        
+        <tag>设计模式</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/12/22/%E6%8A%BD%E8%B1%A1%E9%9D%99%E6%80%81%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</loc>
+    <lastmod>2018-01-19T06:28:59.163Z</lastmod>
+    <data>
+        <display>
+        <title>工厂模式的运用</title>
+        <pubTime>2017-12-22T07:58:34.000Z</pubTime>
+        
+        <tag>设计模式</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+</urlset>
